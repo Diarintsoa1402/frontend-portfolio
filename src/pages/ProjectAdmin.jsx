@@ -12,7 +12,7 @@ export default function ProjectAdmin() {
   const [form, setForm] = useState({
     title: '',
     description: '',
-    image: '',
+    image: [''],
     link: '',
     tags: '',
   });
@@ -23,13 +23,17 @@ export default function ProjectAdmin() {
     setIsLoading(true);
     try {
       const data = await getProjects();
-      // On force tags à être un tableau
       const formatted = data.map((project) => ({
         ...project,
         tags: Array.isArray(project.tags)
           ? project.tags
           : typeof project.tags === 'string'
           ? project.tags.split(',').map((tag) => tag.trim())
+          : [],
+        image: Array.isArray(project.image)
+          ? project.image
+          : typeof project.image === 'string'
+          ? project.image.split(',').map((img) => img.trim())
           : [],
       }));
       setProjects(formatted);
@@ -60,7 +64,13 @@ export default function ProjectAdmin() {
       } else {
         await createProject(dataToSend);
       }
-      setForm({ title: '', description: '', image: '', link: '', tags: '' });
+      setForm({
+        title: '',
+        description: '',
+        image: [''],
+        link: '',
+        tags: '',
+      });
       setEditingId(null);
       await loadProjects();
     } catch (error) {
@@ -72,7 +82,7 @@ export default function ProjectAdmin() {
     setForm({
       title: project.title,
       description: project.description,
-      image: project.image || '',
+      image: Array.isArray(project.image) ? project.image : [project.image],
       link: project.link || '',
       tags: Array.isArray(project.tags) ? project.tags.join(', ') : '',
     });
@@ -108,7 +118,7 @@ export default function ProjectAdmin() {
             onSubmit={handleSubmit}
             className="space-y-6 bg-[#2E073F]/50 p-6 rounded-xl border border-[#9456BD]/30"
           >
-            {['title', 'description', 'image', 'link', 'tags'].map((field) => (
+            {['title', 'description', 'link', 'tags'].map((field) => (
               <div key={field} className="space-y-2">
                 <label className="block text-[#CFEB00] capitalize">{field}</label>
                 {field === 'description' ? (
@@ -128,13 +138,49 @@ export default function ProjectAdmin() {
                     className="w-full p-3 bg-[#3a0f52] border border-[#9456BD]/50 rounded-lg"
                     placeholder={
                       field === 'tags' ? 'Ex: React, Node, PostgreSQL' :
-                      field === 'link' ? 'URL vers le projet' :
-                      field === 'image' ? 'URL de l’image' : ''
+                      field === 'link' ? 'URL vers le projet' : ''
                     }
                   />
                 )}
               </div>
             ))}
+
+            {/* Champs dynamiques pour les images */}
+            <div className="space-y-2">
+              <label className="block text-[#CFEB00]">Images (URLs)</label>
+              {form.image.map((img, idx) => (
+                <div key={idx} className="flex gap-2 mb-2">
+                  <input
+                    type="text"
+                    value={img}
+                    onChange={(e) => {
+                      const newImages = [...form.image];
+                      newImages[idx] = e.target.value;
+                      setForm({ ...form, image: newImages });
+                    }}
+                    className="flex-1 p-2 bg-[#3a0f52] border border-[#9456BD]/50 rounded"
+                    placeholder={`URL image #${idx + 1}`}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const newImages = form.image.filter((_, i) => i !== idx);
+                      setForm({ ...form, image: newImages });
+                    }}
+                    className="px-2 text-red-500"
+                  >
+                    ✕
+                  </button>
+                </div>
+              ))}
+              <button
+                type="button"
+                onClick={() => setForm({ ...form, image: [...form.image, ''] })}
+                className="text-sm text-[#CFEB00] hover:underline"
+              >
+                + Ajouter une image
+              </button>
+            </div>
 
             <div className="flex gap-4 pt-4">
               <button
@@ -147,7 +193,7 @@ export default function ProjectAdmin() {
                 <button
                   type="button"
                   onClick={() => {
-                    setForm({ title: '', description: '', image: '', link: '', tags: '' });
+                    setForm({ title: '', description: '', image: [''], link: '', tags: '' });
                     setEditingId(null);
                   }}
                   className="px-6 py-3 border border-[#9456BD] text-[#9456BD] rounded-lg font-bold hover:bg-[#9456BD] hover:text-white"
@@ -158,6 +204,7 @@ export default function ProjectAdmin() {
             </div>
           </form>
 
+          {/* Liste des projets */}
           <div className="mt-12">
             <h3 className="text-2xl font-bold text-[#CFEB00] mb-6">Projets existants</h3>
 
@@ -204,6 +251,18 @@ export default function ProjectAdmin() {
                               >
                                 Voir le projet →
                               </a>
+                            )}
+                            {Array.isArray(project.image) && project.image.length > 0 && (
+                              <div className="grid grid-cols-2 gap-2 mt-4">
+                                {project.image.map((img, i) => (
+                                  <img
+                                    key={i}
+                                    src={img}
+                                    alt={project.title ? `${project.title} ${i + 1}` : `Projet ${i + 1}`}
+                                    className="h-24 w-full object-cover rounded"
+                                  />
+                                ))}
+                              </div>
                             )}
                           </div>
 

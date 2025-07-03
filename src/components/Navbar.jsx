@@ -1,15 +1,15 @@
 import { Link, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function Navbar() {
   const location = useLocation();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   const navLinks = [
     { path: "/", name: "Accueil" },
     { path: "/projects", name: "Projets" },
     { path: "/contact", name: "Contact" },
     { path: "/services", name: "Services" },
-   // { path: "/admin/projects", name: "Admin Projets" },
-    //{ path: "/admin/contacts", name: "Admin Contacts" },
   ];
 
   return (
@@ -21,7 +21,7 @@ export default function Navbar() {
             to="/" 
             className="text-2xl font-bold text-[#CFEB00] hover:text-white transition-colors"
           >
-            Mon<span className="text-[#9456BD]">Portfolio</span>
+            R<span className="text-[#9456BD]">Dix</span>
           </Link>
 
           {/* Liens Desktop */}
@@ -44,12 +44,35 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Menu Mobile (à implémenter) */}
-          <button className="md:hidden text-[#9456BD] hover:text-[#CFEB00]">
+          {/* Menu Mobile */}
+          <button 
+            className="md:hidden text-[#9456BD] hover:text-[#CFEB00] focus:outline-none"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
+        </div>
+
+        {/* Menu Mobile - Contenu */}
+        <div className={`md:hidden ${mobileMenuOpen ? 'block' : 'hidden'}`}>
+          <div className="pt-2 pb-4 space-y-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  location.pathname === link.path
+                    ? 'bg-[#3a0f52] text-[#CFEB00]'
+                    : 'text-[#9456BD] hover:bg-[#3a0f52] hover:text-white'
+                }`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </nav>

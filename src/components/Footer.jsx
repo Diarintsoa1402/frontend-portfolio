@@ -33,7 +33,7 @@ export default function Footer() {
               <div className="flex items-center gap-2">
                 <FiMail className="text-[#CFEB00]" />
                 <a href="diarintsoa1402@gmail.com" className="hover:text-[#CFEB00] transition-colors">
-                  diarintsoa.dev@gmail.com
+                  diarintsoa1402@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2">
