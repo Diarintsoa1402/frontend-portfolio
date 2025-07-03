@@ -32,7 +32,7 @@ export default function Footer() {
             <div className="space-y-2 text-[#9456BD]">
               <div className="flex items-center gap-2">
                 <FiMail className="text-[#CFEB00]" />
-                <a href="mailto:diarintsoa.dev@gmail.com" className="hover:text-[#CFEB00] transition-colors">
+                <a href="diarintsoa1402@gmail.com" className="hover:text-[#CFEB00] transition-colors">
                   diarintsoa.dev@gmail.com
                 </a>
               </div>

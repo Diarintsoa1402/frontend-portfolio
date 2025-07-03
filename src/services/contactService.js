@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/contacts'; // adapte selon ton backend
+const API_URL = 'https://backend-portfolio-q4t4.onrender.com/api/contacts'; // adapte selon ton backend
 
 export const getContacts = async () => {
   const res = await axios.get(API_URL);

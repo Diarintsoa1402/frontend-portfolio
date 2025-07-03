@@ -84,7 +84,7 @@ export default function EducationExperience() {
                 <div className="pl-10 space-y-2">
                   <p><span className="text-[#CFEB00]">Thème :</span> Conception d'un logiciel de système de facturation numérique</p>
                   <p><span className="text-[#CFEB00]">Durée :</span> Deux mois</p>
-                  <p><span className="text-[#CFEB00]">Mention :</span> Honorable (18,75/20)</p>
+                  <p><span className="text-[#CFEB00]">Mention :</span> Honorable </p>
                 </div>
               </motion.div>
 
@@ -105,7 +105,7 @@ export default function EducationExperience() {
                 <div className="pl-10 space-y-2">
                   <p><span className="text-[#CFEB00]">Thème :</span> Conception et Modélisation d'un application Web de gestion de voyage</p>
                   <p><span className="text-[#CFEB00]">Durée :</span> Deux mois</p>
-                  <p><span className="text-[#CFEB00]">Mention :</span> Très Bien (18/20)</p>
+                  <p><span className="text-[#CFEB00]">Mention :</span> Très Bien </p>
                 </div>
               </motion.div>
 
