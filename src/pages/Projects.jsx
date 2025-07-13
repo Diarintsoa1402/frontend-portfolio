@@ -44,7 +44,7 @@ const Projects = () => {
             Mes <span className="text-[#9456BD]">Projets</span>
           </h2>
           <p className="text-xl text-[#9456BD] max-w-2xl mx-auto">
-            Découvrez une sélection de mes réalisations les plus significatives
+            Découvrez une sélection de mes réalisations les plus significatives <br /> Cliquez sur l'image pour mieux visualiser
           </p>
         </motion.div>
 

@@ -48,7 +48,10 @@ const ProjectCard = ({ title, description, image, link, tags }) => {
 
         <div className="p-6">
           <h3 className="text-2xl font-bold text-[#CFEB00] mb-2">{title}</h3>
-          <p className="text-[#9456BD] mb-4">{description}</p>
+         <p className="text-[#9456BD] mb-4 whitespace-pre-line break-words">
+  {description}
+</p>
+
           {tags && (
             <div className="flex flex-wrap gap-2 mb-4">
               {tags.map((tag, index) => (
