@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import HeroImg from '../assets/images/Hero.JPG'; // ⬅️ Import de l’image
+import HeroImg from '../assets/images/hero2.jpg'; // ⬅️ Import de l’image
 import CV from '../assets/CV.pdf';
 export default function About() {
     return (

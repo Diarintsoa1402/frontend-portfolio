@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import HeroImg from '../assets/images/hero1.JPG';
+import HeroImg from '../assets/images/hero1.jpg';
 import { TypeAnimation } from 'react-type-animation'; // Import du package
 
 export default function Hero() {
