@@ -70,7 +70,7 @@ export default function Skills() {
             </h3>
             <div className="space-y-6">
               {[
-                { name: "Développement Web", level: 90 },
+                { name: "Développement Web et mobile (React, ReactNative, Node.js)", level: 90 },
                 { name: "UI/UX Design", level: 85 },
                 { name: "Gestion de Projet", level: 75 },
                 { name: "DevOps", level: 65 }

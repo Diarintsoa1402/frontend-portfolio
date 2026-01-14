@@ -23,7 +23,7 @@ export default function EducationExperience() {
 
             <div className="space-y-8">
               {/* Formation 1 */}
-              <motion.div 
+               <motion.div 
                 className="bg-[#3a0f52]/50 border border-[#9456BD]/30 rounded-xl p-6 hover:border-[#CFEB00] transition-colors"
                 whileHover={{ y: -5 }}
               >
@@ -33,8 +33,20 @@ export default function EducationExperience() {
                 <p className="text-[#9456BD] mb-1">2023-2024, Tanambao Fianarantsoa</p>
                 <p className="text-[#CFEB00]/80">ECOLE NATIONALE D'INFORMATIQUE</p>
               </motion.div>
-
               {/* Formation 2 */}
+              <motion.div 
+                className="bg-[#3a0f52]/50 border border-[#9456BD]/30 rounded-xl p-6 hover:border-[#CFEB00] transition-colors"
+                whileHover={{ y: -5 }}
+              >
+                <h4 className="text-xl font-bold text-[#CFEB00] mb-2">
+                  Troisieme année de licence en informatique générale
+                </h4>
+                <p className="text-[#9456BD] mb-1">2023-2024, Tanambao Fianarantsoa</p>
+                <p className="text-[#9456BD] mb-1">Obtention du Diplome en Licence Professionnelle en Informatique Générale</p>
+                <p className="text-[#CFEB00]/80">ECOLE NATIONALE D'INFORMATIQUE</p>
+              </motion.div>
+
+              {/* Formation 3 */}
               <motion.div 
                 className="bg-[#3a0f52]/50 border border-[#9456BD]/30 rounded-xl p-6 hover:border-[#CFEB00] transition-colors"
                 whileHover={{ y: -5 }}
@@ -46,7 +58,7 @@ export default function EducationExperience() {
                 <p className="text-[#CFEB00]/80">ECOLE NATIONALE D'INFORMATIQUE</p>
               </motion.div>
 
-              {/* Formation 3 */}
+              {/* Formation 4 */}
               <motion.div 
                 className="bg-[#3a0f52]/50 border border-[#9456BD]/30 rounded-xl p-6 hover:border-[#CFEB00] transition-colors"
                 whileHover={{ y: -5 }}
@@ -67,6 +79,31 @@ export default function EducationExperience() {
             </h3>
 
             <div className="space-y-8">
+              {/* Expérience 0 */}
+                 <motion.div 
+                className="bg-[#3a0f52]/50 border border-[#9456BD]/30 rounded-xl p-6 hover:border-[#CFEB00] transition-colors"
+                whileHover={{ y: -5 }}
+              >
+                <div className="flex items-start gap-4 mb-3">
+                  <div className="text-[#CFEB00] mt-1">
+                    <FiRadio className="text-xl" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-[#CFEB00]">Stage au sein de la Radio Tsiry</h4>
+                    <p className="text-[#9456BD]">2024</p>
+                  </div>
+                </div>
+                <div className="pl-10 space-y-2">
+                  <p><span className="text-[#CFEB00]">Thème :</span> CONCEPTION ET DÉVELOPPEMENT DE LA PLATEFORME 
+FUTUREMAKERS HUB UNE SOLUTION NUMÉRIQUE 
+INCLUSIVE POUR L’ÉDUCATION ENTREPRENEURIALE 
+DES ENFANTS ET L’AUTONOMISATION DIGITALE DES 
+FEMMES </p>
+                  <p><span className="text-[#CFEB00]">Durée :</span> Trois mois</p>
+                  <p><span className="text-[#CFEB00]">Mention :</span> Honorable </p>
+                </div>
+              </motion.div>
+
               {/* Expérience 1 */}
               <motion.div 
                 className="bg-[#3a0f52]/50 border border-[#9456BD]/30 rounded-xl p-6 hover:border-[#CFEB00] transition-colors"
