@@ -22,6 +22,19 @@ export default function EducationExperience() {
             </h3>
 
             <div className="space-y-8">
+                {/* Formation 2 */}
+              <motion.div 
+                className="bg-[#3a0f52]/50 border border-[#9456BD]/30 rounded-xl p-6 hover:border-[#CFEB00] transition-colors"
+                whileHover={{ y: -5 }}
+              >
+                <h4 className="text-xl font-bold text-[#CFEB00] mb-2">
+                  Troisieme année de licence en informatique générale
+                </h4>
+                <p className="text-[#9456BD] mb-1">2024-2025, Tanambao Fianarantsoa</p>
+                <p className="text-[#9456BD] mb-1">Obtention du Diplome en Licence Professionnelle en Informatique Générale</p>
+                <p className="text-[#CFEB00]/80">ECOLE NATIONALE D'INFORMATIQUE</p>
+              </motion.div>
+
               {/* Formation 1 */}
                <motion.div 
                 className="bg-[#3a0f52]/50 border border-[#9456BD]/30 rounded-xl p-6 hover:border-[#CFEB00] transition-colors"
@@ -33,18 +46,7 @@ export default function EducationExperience() {
                 <p className="text-[#9456BD] mb-1">2023-2024, Tanambao Fianarantsoa</p>
                 <p className="text-[#CFEB00]/80">ECOLE NATIONALE D'INFORMATIQUE</p>
               </motion.div>
-              {/* Formation 2 */}
-              <motion.div 
-                className="bg-[#3a0f52]/50 border border-[#9456BD]/30 rounded-xl p-6 hover:border-[#CFEB00] transition-colors"
-                whileHover={{ y: -5 }}
-              >
-                <h4 className="text-xl font-bold text-[#CFEB00] mb-2">
-                  Troisieme année de licence en informatique générale
-                </h4>
-                <p className="text-[#9456BD] mb-1">2023-2024, Tanambao Fianarantsoa</p>
-                <p className="text-[#9456BD] mb-1">Obtention du Diplome en Licence Professionnelle en Informatique Générale</p>
-                <p className="text-[#CFEB00]/80">ECOLE NATIONALE D'INFORMATIQUE</p>
-              </motion.div>
+           
 
               {/* Formation 3 */}
               <motion.div 
@@ -89,8 +91,8 @@ export default function EducationExperience() {
                     <FiRadio className="text-xl" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-[#CFEB00]">Stage au sein de la Radio Tsiry</h4>
-                    <p className="text-[#9456BD]">2024</p>
+                    <h4 className="text-xl font-bold text-[#CFEB00]">Stage au sein de l'ONG Ndao Hifanosika</h4>
+                    <p className="text-[#9456BD]">2025</p>
                   </div>
                 </div>
                 <div className="pl-10 space-y-2">
