@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import HeroImg from '../assets/images/hero2.jpg'; // ⬅️ Import de l’image
-import CV from '../assets/CV.pdf';
+import CV from '../assets/CV2025.pdf'; // ⬅️ Import du fichier PDF
 export default function About() {
     return (
       <section id="about" className="py-20 px-6 bg-[#2E073F] text-white">
