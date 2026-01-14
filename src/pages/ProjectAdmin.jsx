@@ -55,7 +55,8 @@ export default function ProjectAdmin() {
     e.preventDefault();
     const dataToSend = {
       ...form,
-      tags: form.tags.split(',').map((tag) => tag.trim()),
+      image: form.image.filter(img => img.trim()).join(','),
+      tags: form.tags,
     };
 
     try {
