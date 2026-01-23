@@ -75,7 +75,7 @@ export default function About() {
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              {['React', 'Node.js', 'UI/UX', 'Python', 'Postgres', 'Figma', 'Docker', 'VS Code', 'Postman', 'Android Studio', 'Git','Captcaht','visio meeting'].map((skill) => (
+              {['React', 'Node.js', 'UI/UX', 'Python', 'Postgres', 'Figma','CANVA', 'Docker', 'VS Code', 'Postman', 'Android Studio','VirtualBOX', 'Git','CAPCHAT','visio meeting'].map((skill) => (
                 <motion.div 
                   key={skill} 
                   className="bg-[#3a0f52] border border-[#9456BD]/30 rounded-xl p-4 text-center hover:border-[#CFEB00] transition-colors"

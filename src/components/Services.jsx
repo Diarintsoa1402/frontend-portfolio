@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiCode, FiLayout, FiSmartphone, FiDatabase, FiPenTool } from 'react-icons/fi';
+import { FiCode, FiLayout, FiSmartphone, FiDatabase, FiPenTool, FiCloud } from 'react-icons/fi';
 
 export default function Services() {
   const services = [
@@ -32,7 +32,13 @@ export default function Services() {
       title: "Conception Graphique",
       description: "Création d'identités visuelles et supports print/web cohérents avec votre image de marque.",
       features: ["Logos & branding", "Maquettes", "Assets digitaux"]
-    }
+    },
+    {
+      icon: <FiCloud className="text-4xl" />,
+      title: "Deploiement & Cloud",
+      description: "Mise en place d'infrastructures cloud scalables et sécurisées pour héberger vos applications.",
+      features: ["AWS/GCP", "CI/CD", "Surveillance & maintenance"]
+    },
   ];
 
   return (

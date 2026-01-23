@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 
 export default function Skills() {
     const skills = [
-      { name: "Frontend", technologies: ["React", "Next.js", "Tailwind CSS", "JavaScript", "TypeScript"] },
-      { name: "Backend", technologies: ["Node.js", "Express", "Python", "Django", "Postgres"] },
-      { name: "Design", technologies: ["Figma", "Adobe XD", "UI/UX", "Prototyping", "Wireframing"] },
-      { name: "Outils", technologies: ["Git", "Docker", "VS Code", "Postman", "Android Studio"] }
+      { name: "Frontend", technologies: ["React", "Next.js", "vuejs","Tailwind CSS", "JavaScript", "TypeScript,", "HTML", "CSS"] },
+      { name: "Backend", technologies: ["Node.js", "Express", "Python","PHP", "Django", "Postgres","Angular"] },
+      { name: "Design", technologies: ["Figma", "Adobe XD", "UI/UX", "Capcut", "Canva"] },
+      { name: "Outils", technologies: ["Git", "Docker", "VS Code", "Postman", "Android Studio","virtualbox"] }
     ];
 
     return (
@@ -70,7 +70,7 @@ export default function Skills() {
             </h3>
             <div className="space-y-6">
               {[
-                { name: "Développement Web et mobile (React, ReactNative, Node.js)", level: 90 },
+                { name: "Développement Web et mobile ", level: 90 },
                 { name: "UI/UX Design", level: 85 },
                 { name: "Gestion de Projet", level: 75 },
                 { name: "DevOps", level: 65 }

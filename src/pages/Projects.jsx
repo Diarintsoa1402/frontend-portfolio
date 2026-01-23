@@ -19,6 +19,11 @@ const Projects = () => {
             : typeof project.tags === 'string'
             ? project.tags.split(',').map((tag) => tag.trim())
             : [],
+          image: Array.isArray(project.image)
+            ? project.image
+            : typeof project.image === 'string'
+            ? project.image.split(',').map((img) => img.trim())
+            : [],
         }));
         setProjects(formatted);
       } catch (error) {

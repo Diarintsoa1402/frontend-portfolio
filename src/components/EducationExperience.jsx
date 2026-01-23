@@ -152,14 +152,14 @@ FEMMES </p>
               <motion.div 
                 className="bg-[#3a0f52]/50 border border-[#9456BD]/30 rounded-xl p-6 hover:border-[#CFEB00] transition-colors"
                 whileHover={{ y: -5 }}
-              >
+               >
                 <div className="flex items-start gap-4 mb-3">
                   <div className="text-[#CFEB00] mt-1">
                     <FiCheck className="text-xl" />
                   </div>
                   <div>
                     <h4 className="text-xl font-bold text-[#CFEB00]">Projets personnels</h4>
-                    <p className="text-[#9456BD]">2022-2024</p>
+                    <p className="text-[#9456BD]">2022-2026</p>
                   </div>
                 </div>
                 <div className="pl-10 space-y-2">
@@ -168,8 +168,38 @@ FEMMES </p>
                     <li>Portfolio (Web)</li>
                     <li>Gestion d'élève (Web)</li>
                     <li>Prototype de mon portfolio (Ux Design)</li>
+                    <li>Infrastructure DevOps (Mise en place d'infrastructures cloud scalables et sécurisées pour héberger vos applications)</li>
+                        <li>Sécurisation des vulnérabilités,
+                              Tests d'intrusion (Kali Linux,
+                              Mimikatz, PsExec)
+                              Systèmes de défense (PfSense,
+                              Snort, Suricata), Supervision
+                              (ELK Stack)
+                              Sécurisation de serveurs
+                              (Asterisk), Arduino</li>
                   </ul>
                   <p><span className="text-[#CFEB00]">Durée :</span> Un mois</p>
+                </div>
+              </motion.div>
+              
+              {/* Expérience 4 */}
+              <motion.div 
+                className="bg-[#3a0f52]/50 border border-[#9456BD]/30 rounded-xl p-6 hover:border-[#CFEB00] transition-colors"
+                whileHover={{ y: -5 }}
+              >
+                <div className="flex items-start gap-4 mb-3">
+                  <div className="text-[#CFEB00] mt-1">
+                    <FiCheck className="text-xl" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-[#CFEB00]">Autres</h4>
+                   
+                  </div>
+                </div>
+                <div className="pl-10 space-y-2">
+                  <p><span className="text-[#CFEB00]"></span> Opérateur de Saisie de Données  chez Beyaft</p>
+                  <p><span className="text-[#CFEB00]"></span>  Agent chatteur sur plusieurs plateforme </p>
+                  <p><span className="text-[#CFEB00]"></span> TASKER avec REMOTASK </p>
                 </div>
               </motion.div>
             </div>
